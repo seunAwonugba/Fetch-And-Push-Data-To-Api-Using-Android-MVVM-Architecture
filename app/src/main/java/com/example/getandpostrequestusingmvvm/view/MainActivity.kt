@@ -201,7 +201,9 @@ class MainActivity : AppCompatActivity() {
                                     Log.d("TAG", sendPostToApiFromDataReceivedInAddNewPostActivity.code().toString())
                                     Log.d("TAG", sendPostToApiFromDataReceivedInAddNewPostActivity.message().toString())
 
-                                    instanceOfAllPostAdapter.postArrayList.add(instanceOfPostDataClass)
+                                   instanceOfAllPostAdapter.postArrayList.add(instanceOfPostDataClass)
+                                    instanceOfAllPostAdapter = PostAdapter(instanceOfAllPostAdapter.postArrayList,this)
+
                                     instanceOfAllPostAdapter.notifyDataSetChanged()
                                     instanceOfRecyclerView.adapter = instanceOfAllPostAdapter
                                 }
